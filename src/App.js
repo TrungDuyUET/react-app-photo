@@ -7,6 +7,7 @@ import NotFound from './components/NotFound';
 // Lazy load - Code splitting
 const Photo = React.lazy(() => import('./features/Photo'));
 
+
 function App() {
   return (
     <div className="photo-app">
