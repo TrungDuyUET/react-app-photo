@@ -3,7 +3,7 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
-
+import Input from './InputCom'
 // Lazy load - Code splitting
 const Photo = React.lazy(() => import('./features/Photo'));
 
@@ -17,7 +17,9 @@ function App() {
           <Switch>
             <Redirect exact from="/" to="/photos" />
             <Route path="/photos" component={Photo} />
+            <Route path="/test" component={Input} />
             <Route component={NotFound} />
+            
           </Switch>
         </BrowserRouter>
       </Suspense>
